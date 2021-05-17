@@ -35,15 +35,17 @@
             this.lblKullanici = new System.Windows.Forms.Label();
             this.txtBoxKullanici = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
-            this.lblSifre.Location = new System.Drawing.Point(6, 64);
+            this.lblSifre.BackColor = System.Drawing.Color.Transparent;
+            this.lblSifre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSifre.ForeColor = System.Drawing.Color.White;
+            this.lblSifre.Location = new System.Drawing.Point(556, 215);
+            this.lblSifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(37, 17);
             this.lblSifre.TabIndex = 1;
@@ -51,40 +53,60 @@
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(16, 106);
-            this.btnGiris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGiris.BackColor = System.Drawing.Color.Transparent;
+            this.btnGiris.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGiris.FlatAppearance.BorderSize = 0;
+            this.btnGiris.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGiris.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.ForeColor = System.Drawing.Color.GreenYellow;
+            this.btnGiris.Location = new System.Drawing.Point(629, 269);
+            this.btnGiris.Margin = new System.Windows.Forms.Padding(2);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(75, 33);
+            this.btnGiris.Size = new System.Drawing.Size(56, 27);
             this.btnGiris.TabIndex = 2;
             this.btnGiris.Text = "Giriş";
-            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click_1);
             // 
             // txtBoxSifre
             // 
-            this.txtBoxSifre.Location = new System.Drawing.Point(96, 56);
-            this.txtBoxSifre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxSifre.Location = new System.Drawing.Point(679, 214);
+            this.txtBoxSifre.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxSifre.Name = "txtBoxSifre";
             this.txtBoxSifre.PasswordChar = '*';
-            this.txtBoxSifre.Size = new System.Drawing.Size(100, 22);
+            this.txtBoxSifre.Size = new System.Drawing.Size(76, 20);
             this.txtBoxSifre.TabIndex = 4;
-            this.txtBoxSifre.Text = "Admin";
             // 
             // btnBasvur
             // 
-            this.btnBasvur.Location = new System.Drawing.Point(110, 106);
-            this.btnBasvur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBasvur.BackColor = System.Drawing.Color.Transparent;
+            this.btnBasvur.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBasvur.FlatAppearance.BorderSize = 0;
+            this.btnBasvur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBasvur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBasvur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBasvur.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBasvur.ForeColor = System.Drawing.Color.OliveDrab;
+            this.btnBasvur.Location = new System.Drawing.Point(721, 358);
+            this.btnBasvur.Margin = new System.Windows.Forms.Padding(2);
             this.btnBasvur.Name = "btnBasvur";
-            this.btnBasvur.Size = new System.Drawing.Size(75, 33);
+            this.btnBasvur.Size = new System.Drawing.Size(56, 31);
             this.btnBasvur.TabIndex = 5;
             this.btnBasvur.Text = "Başvur";
-            this.btnBasvur.UseVisualStyleBackColor = true;
+            this.btnBasvur.UseVisualStyleBackColor = false;
             this.btnBasvur.Click += new System.EventHandler(this.btnBasvur_Click);
             // 
             // lblKullanici
             // 
             this.lblKullanici.AutoSize = true;
-            this.lblKullanici.Location = new System.Drawing.Point(6, 29);
+            this.lblKullanici.BackColor = System.Drawing.Color.Transparent;
+            this.lblKullanici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.ForeColor = System.Drawing.Color.White;
+            this.lblKullanici.Location = new System.Drawing.Point(556, 162);
+            this.lblKullanici.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKullanici.Name = "lblKullanici";
             this.lblKullanici.Size = new System.Drawing.Size(84, 17);
             this.lblKullanici.TabIndex = 0;
@@ -92,64 +114,52 @@
             // 
             // txtBoxKullanici
             // 
-            this.txtBoxKullanici.Location = new System.Drawing.Point(96, 26);
-            this.txtBoxKullanici.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxKullanici.Location = new System.Drawing.Point(679, 159);
+            this.txtBoxKullanici.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxKullanici.Name = "txtBoxKullanici";
-            this.txtBoxKullanici.Size = new System.Drawing.Size(100, 22);
+            this.txtBoxKullanici.Size = new System.Drawing.Size(76, 20);
             this.txtBoxKullanici.TabIndex = 3;
-            this.txtBoxKullanici.Text = "Admin";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(263, 18);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(750, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.Size = new System.Drawing.Size(50, 38);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Çıkış";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(202, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 22);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "*";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblKullanici);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.lblSifre);
-            this.groupBox1.Controls.Add(this.btnGiris);
-            this.groupBox1.Controls.Add(this.btnBasvur);
-            this.groupBox1.Controls.Add(this.txtBoxKullanici);
-            this.groupBox1.Controls.Add(this.txtBoxSifre);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 156);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Giriş";
             // 
             // giris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 187);
-            this.Controls.Add(this.groupBox1);
+            this.BackgroundImage = global::ProjeOdevi.Properties.Resources.giris21;
+            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.lblKullanici);
+            this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBasvur);
+            this.Controls.Add(this.txtBoxSifre);
+            this.Controls.Add(this.txtBoxKullanici);
+            this.Controls.Add(this.btnGiris);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,8 +171,6 @@
         private System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.TextBox txtBoxKullanici;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

@@ -18,7 +18,7 @@ namespace ProjeOdevi
         }
 
 
-          SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-P128UV7\\SQLEXPRESS;Initial Catalog=MARKETLER;Integrated Security=True");
+          SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
         bool parola = false;
         private void btnBasvur_Click(object sender, EventArgs e)
         {

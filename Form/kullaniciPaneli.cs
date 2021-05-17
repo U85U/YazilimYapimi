@@ -17,7 +17,7 @@ namespace ProjeOdevi
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-P128UV7\\SQLEXPRESS;Initial Catalog=MARKETLER;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
 
         private void button1_Click(object sender, EventArgs e)
         {

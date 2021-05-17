@@ -16,7 +16,7 @@ namespace ProjeOdevi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new calisan_bilgi());
+            Application.Run(new giris());
         }
     }
 }
