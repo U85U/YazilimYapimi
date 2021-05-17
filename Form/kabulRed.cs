@@ -18,7 +18,7 @@ namespace ProjeOdevi
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-SNVLI3E4;Initial Catalog=MARKETLER;Integrated Security=True");
 
 
 
@@ -47,14 +47,24 @@ namespace ProjeOdevi
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
-                lblAd.Text = dr["ad"].ToString();
-                lblSoyad.Text = dr["soyad"].ToString();
-                lblKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
-                lblParola.Text = dr["parola"].ToString();
-                lblTC.Text = dr["TC"].ToString();
-                lblTel.Text = dr["telefon"].ToString();
-                lblEPosta.Text = dr["ePosta"].ToString();
-                lblAdres.Text = dr["adres"].ToString();
+                ProjeOdevi.Sınıf.Kullanıcı kullanıcı = new Sınıf.Kullanıcı();
+                kullanıcı.ad = dr["ad"].ToString();
+                kullanıcı.soyad = dr["soyad"].ToString();
+                kullanıcı.kullaniciAdi = dr["kullaniciAdi"].ToString();
+                kullanıcı.parola = dr["parola"].ToString();
+                kullanıcı.tc = dr["TC"].ToString();
+                kullanıcı.telefon = dr["telefon"].ToString();
+                kullanıcı.eposta = dr["ePosta"].ToString();
+                kullanıcı.adres = dr["adres"].ToString();
+
+                lblAd.Text = kullanıcı.ad;
+                lblSoyad.Text = kullanıcı.soyad;
+                lblKullaniciAdi.Text = kullanıcı.kullaniciAdi;
+                lblParola.Text = kullanıcı.parola;
+                lblTC.Text = kullanıcı.tc;
+                lblTel.Text = kullanıcı.telefon;
+                lblEPosta.Text = kullanıcı.eposta;
+                lblAdres.Text = kullanıcı.adres;
             }
             baglanti.Close();
         }
@@ -152,10 +162,16 @@ namespace ProjeOdevi
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
-                lblUserName.Text = dr["kullaniciAdiUB"].ToString();
-                lblUrunAdi.Text = dr["urunUB"].ToString();
-                lblUrunMiktari.Text = dr["istekGrUB"].ToString();
-                lblFiyat.Text = dr["fiyatUB"].ToString();
+                Urun urun = new Urun();
+                urun.satici = dr["kullaniciAdiUB"].ToString();
+                urun.urunAdı = dr["urunUB"].ToString();
+                urun.urunMiktari = dr["istekGrUB"].ToString();
+                urun.urunFiyati = dr["fiyatUB"].ToString();
+
+                lblUserName.Text = urun.satici;
+                lblUrunAdi.Text = urun.urunAdı;
+                lblUrunMiktari.Text = urun.urunMiktari;
+                lblFiyat.Text = urun.urunFiyati;
             }
             baglanti.Close();
         }

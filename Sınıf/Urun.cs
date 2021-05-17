@@ -8,8 +8,9 @@ namespace ProjeOdevi
 {
     public class Urun
     {
-        public string urunAd { get; set; }
-        public string urunID { get; set; }
-        public string urunAdedi { get; set; }
+        public string satici { get; set; }
+        public string urunAdı { get; set; }
+        public string urunMiktari { get; set; }
+        public string urunFiyati { get; set; }
     }
 }

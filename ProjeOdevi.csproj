@@ -69,7 +69,6 @@
     <Compile Include="Form\girisEkranı.Designer.cs">
       <DependentUpon>girisEkranı.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sınıf\Izin.cs" />
     <Compile Include="Form\kullaniciPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +81,9 @@
     <Compile Include="Form\kabulRed.Designer.cs">
       <DependentUpon>kabulRed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sınıf\personel.cs" />
+    <Compile Include="Sınıf\Kullanıcı.cs" />
     <Compile Include="Sınıf\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sınıf\Sube.cs" />
-    <Compile Include="Sınıf\Tedarikci.cs" />
     <Compile Include="Sınıf\Urun.cs" />
     <EmbeddedResource Include="Form\anaSayfa.resx">
       <DependentUpon>anaSayfa.cs</DependentUpon>

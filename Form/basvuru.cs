@@ -18,20 +18,33 @@ namespace ProjeOdevi
         }
 
 
-          SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
+          SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-SNVLI3E4;Initial Catalog=MARKETLER;Integrated Security=True");
         bool parola = false;
         private void btnBasvur_Click(object sender, EventArgs e)
         {
+            ProjeOdevi.Sınıf.Kullanıcı kullanıcı = new Sınıf.Kullanıcı();
+
+
+            kullanıcı.ad = txtAd.Text;
+            kullanıcı.soyad = txtSoyad.Text;
+            kullanıcı.kullaniciAdi = txtKullaniciAdi.Text;
+            kullanıcı.parola = txtParola.Text;
+            kullanıcı.tc = txtTC.Text;
+            kullanıcı.telefon = txtTelefon.Text;
+            kullanıcı.eposta = txtEPosta.Text;
+            kullanıcı.adres = txtAdres.Text;
+
+
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into basvuru(ad, soyad, kullaniciAdi, parola, TC, Telefon, ePosta, adres) values(@ad, @soyad, @kullaniciAdi, @parola, @TC, @Telefon, @ePosta, @adres)", baglanti);
-            komut.Parameters.AddWithValue("@ad", txtAd.Text);
-            komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
-            komut.Parameters.AddWithValue("@kullaniciAdi", txtKullaniciAdi.Text);
-            komut.Parameters.AddWithValue("@parola", txtParola.Text);
-            komut.Parameters.AddWithValue("@TC", txtTC.Text);
-            komut.Parameters.AddWithValue("@Telefon", txtTelefon.Text);
-            komut.Parameters.AddWithValue("@ePosta", txtEPosta.Text);
-            komut.Parameters.AddWithValue("@adres", txtAdres.Text);
+            komut.Parameters.AddWithValue("@ad", kullanıcı.ad);
+            komut.Parameters.AddWithValue("@soyad", kullanıcı.soyad);
+            komut.Parameters.AddWithValue("@kullaniciAdi", kullanıcı.kullaniciAdi);
+            komut.Parameters.AddWithValue("@parola", kullanıcı.parola);
+            komut.Parameters.AddWithValue("@TC", kullanıcı.tc);
+            komut.Parameters.AddWithValue("@Telefon", kullanıcı.telefon);
+            komut.Parameters.AddWithValue("@ePosta", kullanıcı.eposta);
+            komut.Parameters.AddWithValue("@adres", kullanıcı.adres);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Başvurunuz başarıyle işleme alınmıştır. \n\"Başvuru Sorgula\" kısmına belirlediğiniz kulanıcı adını girerek durumunuzu öğrenbilirsiniz.");
