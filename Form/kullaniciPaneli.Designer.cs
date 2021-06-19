@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.birim = new System.Windows.Forms.Label();
+            this.birimbox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cmbTur
@@ -167,9 +169,9 @@
             this.label4.Location = new System.Drawing.Point(392, 225);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Para(₺) :";
+            this.label4.Text = "Tutar :";
             // 
             // button3
             // 
@@ -209,12 +211,38 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // birim
+            // 
+            this.birim.AutoSize = true;
+            this.birim.BackColor = System.Drawing.Color.Transparent;
+            this.birim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.birim.ForeColor = System.Drawing.Color.SandyBrown;
+            this.birim.Location = new System.Drawing.Point(392, 261);
+            this.birim.Name = "birim";
+            this.birim.Size = new System.Drawing.Size(47, 17);
+            this.birim.TabIndex = 9;
+            this.birim.Text = "Birim :";
+            // 
+            // birimbox
+            // 
+            this.birimbox.FormattingEnabled = true;
+            this.birimbox.Items.AddRange(new object[] {
+            "Dolar",
+            "Euro",
+            "Sterlin"});
+            this.birimbox.Location = new System.Drawing.Point(503, 261);
+            this.birimbox.Name = "birimbox";
+            this.birimbox.Size = new System.Drawing.Size(92, 21);
+            this.birimbox.TabIndex = 10;
+            // 
             // izinler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjeOdevi.Properties.Resources.Untitled_4;
             this.ClientSize = new System.Drawing.Size(637, 458);
+            this.Controls.Add(this.birimbox);
+            this.Controls.Add(this.birim);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCuzdan);
@@ -251,5 +279,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label birim;
+        private System.Windows.Forms.ComboBox birimbox;
     }
 }

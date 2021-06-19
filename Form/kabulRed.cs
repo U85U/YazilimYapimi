@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Xml;
 
 namespace ProjeOdevi
 {
@@ -21,7 +22,40 @@ namespace ProjeOdevi
         SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-SNVLI3E4;Initial Catalog=MARKETLER;Integrated Security=True");
 
 
+        public double DovizGoster(string kur)
+        {
+            try
+            {
+                XmlDocument xmlVerisi = new XmlDocument();
+                xmlVerisi.Load("http://www.tcmb.gov.tr/kurlar/today.xml");
 
+                decimal dolar = Convert.ToDecimal(xmlVerisi.SelectSingleNode(string.Format("Tarih_Date/Currency[@Kod='{0}']/ForexSelling", "USD")).InnerText.Replace('.', ','));
+                decimal euro = Convert.ToDecimal(xmlVerisi.SelectSingleNode(string.Format("Tarih_Date/Currency[@Kod='{0}']/ForexSelling", "EUR")).InnerText.Replace('.', ','));
+                decimal sterlin = Convert.ToDecimal(xmlVerisi.SelectSingleNode(string.Format("Tarih_Date/Currency[@Kod='{0}']/ForexSelling", "GBP")).InnerText.Replace('.', ','));
+
+                if (kur == "Dolar")
+                {
+                    return decimal.ToDouble(dolar);
+                }
+                else if (kur == "Euro")
+                {
+                    return decimal.ToDouble(euro);
+                }
+                else if (kur == "Sterlin")
+                {
+                    return decimal.ToDouble(sterlin);
+                }
+                else {
+                    return 1;
+                }
+            }
+            catch (XmlException xml)
+            {
+                MessageBox.Show(xml.ToString());
+                return 0;
+            }
+
+        }
 
 
         private void btnBasvurulariGoruntule_Click(object sender, EventArgs e)
@@ -282,7 +316,7 @@ namespace ProjeOdevi
             DataSet daset = new DataSet();
             daset.Clear();
             baglanti.Open();
-            string kayit = "select kullaniciAdiPB as 'Kullanıcı Adı' from paraB";
+            string kayit = "select kullaniciAdiPB as 'Kullanıcı Adı', birimPB as 'Birim' from paraB";
             SqlDataAdapter adtr = new SqlDataAdapter(kayit, baglanti);
             adtr.Fill(daset, "paralar");
             dataGridView2.DataSource = daset.Tables["paralar"];
@@ -292,17 +326,27 @@ namespace ProjeOdevi
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             baglanti.Open();
-            string kayit = "select * from paraB WHERE (kullaniciAdiPB = @KA)";
+            string kayit = "select * from paraB WHERE (kullaniciAdiPB = @KA) and (birimPB = @BR)";
             SqlCommand komut = new SqlCommand(kayit, baglanti);
             komut.Parameters.AddWithValue("@KA", dataGridView2.CurrentRow.Cells["Kullanıcı Adı"].Value.ToString());
-            
+            komut.Parameters.AddWithValue("@BR", dataGridView2.CurrentRow.Cells["Birim"].Value.ToString());
+
             SqlDataAdapter da = new SqlDataAdapter(komut);
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
                 lblParaKullanıcı.Text = dr["kullaniciAdiPB"].ToString();
                 lblEkleyecek.Text = dr["istekParaPB"].ToString();
+                parabirimi.Text = dr["birimPB"].ToString();
+                string birim = dr["birimPB"].ToString(); 
+                double kur = DovizGoster(birim);
+                sonkur.Text = kur.ToString();
+                double tutar = Convert.ToInt32(lblEkleyecek.Text) * kur;
+                tutarson.Text = tutar.ToString();
             }
+
+
+
             baglanti.Close();
         }
 
@@ -317,15 +361,16 @@ namespace ProjeOdevi
                 if (Soru == DialogResult.Yes)
                 {
                     baglanti.Open();
-                    SqlCommand delete = new SqlCommand("delete from paraB where kullaniciAdiPB = @KA", baglanti);
+                    SqlCommand delete = new SqlCommand("delete from paraB where kullaniciAdiPB = @KA and birimPB = @BR", baglanti);
                     delete.Parameters.AddWithValue("@KA", lblParaKullanıcı.Text);
+                    delete.Parameters.AddWithValue("@BR", parabirimi.Text);
                     delete.ExecuteNonQuery();
                     baglanti.Close();
                     MessageBox.Show(lblParaKullanıcı + " kişininin para ekleme işlemi başarıyla reddedildi.");
                     DataSet daset = new DataSet();
                     daset.Clear();
                     baglanti.Open();
-                    string kayit = "select kullaniciAdiPB as 'Kullanıcı Adı' from paraB";
+                    string kayit = "select kullaniciAdiPB as 'Kullanıcı Adı', birimPB as 'Birim' from paraB";
                     SqlDataAdapter adtr = new SqlDataAdapter(kayit, baglanti);
                     adtr.Fill(daset, "paralar");
                     dataGridView2.DataSource = daset.Tables["paralar"];
@@ -347,33 +392,35 @@ namespace ProjeOdevi
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (Soru == DialogResult.Yes)
                 {
+ 
+                    
                     baglanti.Open();
                     SqlCommand command = new SqlCommand("select *from basvuru where kullaniciAdi = @KA", baglanti);
                     command.Parameters.AddWithValue("@KA", lblParaKullanıcı.Text);
                     command.Parameters.AddWithValue("@urun", lblEkleyecek.Text);
 
-
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        int a = Convert.ToInt32(reader["cuzdan"]);
+                        double a = Convert.ToDouble(reader["cuzdan"]);
                         reader.Close();
                         SqlCommand guncelle = new SqlCommand("Update basvuru set cuzdan = @cuzdan  Where kullaniciAdi = @KA", baglanti);
-                        guncelle.Parameters.AddWithValue("@cuzdan", (Convert.ToInt32(lblEkleyecek.Text) + a).ToString());
+                        guncelle.Parameters.AddWithValue("@cuzdan", (Convert.ToDouble(tutarson.Text) + a).ToString());
                         guncelle.Parameters.AddWithValue("@KA", lblParaKullanıcı.Text);
                         guncelle.ExecuteNonQuery();
                         baglanti.Close();
                     }
                     baglanti.Open();
-                    SqlCommand delete = new SqlCommand("delete from paraB where kullaniciAdiPB = @KA", baglanti);
+                    SqlCommand delete = new SqlCommand("delete from paraB where kullaniciAdiPB = @KA and birimPB = @BR", baglanti);
                     delete.Parameters.AddWithValue("KA", lblParaKullanıcı.Text);
+                    delete.Parameters.AddWithValue("BR", parabirimi.Text);
                     delete.ExecuteNonQuery();
                     baglanti.Close();
                     MessageBox.Show(lblParaKullanıcı+" kullanıcısının para ekleme işlemi başarıyla onaylandı.");
                     DataSet daset = new DataSet();
                     daset.Clear();
                     baglanti.Open();
-                    string kayit = "select kullaniciAdiPB as 'Kullanıcı Adı' from paraB";
+                    string kayit = "select kullaniciAdiPB as 'Kullanıcı Adı', birimPB as 'Birim' from paraB";
                     SqlDataAdapter adtr = new SqlDataAdapter(kayit, baglanti);
                     adtr.Fill(daset, "paralar");
                     dataGridView2.DataSource = daset.Tables["paralar"];
@@ -408,10 +455,7 @@ namespace ProjeOdevi
             this.Close();
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 
