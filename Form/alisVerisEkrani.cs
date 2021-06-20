@@ -20,7 +20,7 @@ namespace ProjeOdevi
         int don;
         int para;
         bool sistemkontrol = true;
-        SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-SNVLI3E4;Initial Catalog=MARKETLER;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
         DataSet daset = new DataSet();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -150,6 +150,14 @@ namespace ProjeOdevi
         private void button5_Click(object sender, EventArgs e)
         {
             MessageBox.Show(DateTime.Now + "");
+        }
+
+        private void btnRapor_Click(object sender, EventArgs e)
+        {
+            raporForm raporform = new raporForm();
+            raporform.Show();
+            this.Hide();
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace ProjeOdevi
 {
     public partial class izinler : Form
@@ -17,7 +18,9 @@ namespace ProjeOdevi
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-SNVLI3E4;Initial Catalog=MARKETLER;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -85,9 +88,13 @@ namespace ProjeOdevi
         private void button2_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand command = new SqlCommand("select *from paraB where kullaniciAdiPB = @KA", baglanti);
+            SqlCommand command = new SqlCommand("select *from paraB where kullaniciAdiPB = @KA and birimPB = @BR", baglanti);
             command.Parameters.AddWithValue("@KA", giris.user);
+            command.Parameters.AddWithValue("@BR", birimbox.Text);
             SqlDataReader reader = command.ExecuteReader();
+
+            //double toplam = Convert.ToInt32(txtCuzdan.Text) * DovizGoster(birimbox.Text);
+            //txtCuzdan.Text = toplam.ToString();
 
 
             DialogResult Soru;
@@ -101,11 +108,12 @@ namespace ProjeOdevi
                     Soru2 = MessageBox.Show("Henüz yönetici onayı almamış bir bakiye yüklemesi işleminiz olduğunu görüyoruz.\nYeni girdiğiniz bakiye eskisi ile toplamak istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (Soru2 == DialogResult.Yes)
                     {
-                        int a = Convert.ToInt32(reader["istekParaPB"]);
+                       double a = Convert.ToDouble(reader["istekParaPB"]);
                         reader.Close();
-                        SqlCommand guncelle = new SqlCommand("Update paraB set istekParaPB = @istek Where kullaniciAdiPB = @KA", baglanti);
-                        guncelle.Parameters.AddWithValue("@istek", (Convert.ToInt32(txtCuzdan.Text) + a).ToString());
+                        SqlCommand guncelle = new SqlCommand("Update paraB set istekParaPB = @istek Where kullaniciAdiPB = @KA and birimPB = @BR", baglanti);
+                        guncelle.Parameters.AddWithValue("@istek", (Convert.ToDouble(txtCuzdan.Text) + a).ToString());
                         guncelle.Parameters.AddWithValue("@KA", giris.user);
+                        guncelle.Parameters.AddWithValue("@BR", birimbox.Text);
                         guncelle.ExecuteNonQuery();
                         baglanti.Close();
                     }
@@ -117,9 +125,10 @@ namespace ProjeOdevi
                 else
                 {
                     reader.Close();
-                    SqlCommand komut = new SqlCommand("insert into paraB(kullaniciAdiPB, istekParaPB) values(@KA, @istek)", baglanti);
+                    SqlCommand komut = new SqlCommand("insert into paraB(kullaniciAdiPB, istekParaPB, birimPB) values(@KA, @istek, @birim)", baglanti);
                     komut.Parameters.AddWithValue("@KA", giris.user);
                     komut.Parameters.AddWithValue("@istek", txtCuzdan.Text);
+                    komut.Parameters.AddWithValue("@birim", birimbox.Text);
                     komut.ExecuteNonQuery();
                     baglanti.Close();
                 }

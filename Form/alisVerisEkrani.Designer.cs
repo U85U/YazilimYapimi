@@ -37,6 +37,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPara = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRapor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,12 +181,23 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Para: ";
             // 
+            // btnRapor
+            // 
+            this.btnRapor.Location = new System.Drawing.Point(513, 399);
+            this.btnRapor.Name = "btnRapor";
+            this.btnRapor.Size = new System.Drawing.Size(100, 35);
+            this.btnRapor.TabIndex = 48;
+            this.btnRapor.Text = "Rapor Oluştur";
+            this.btnRapor.UseVisualStyleBackColor = true;
+            this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
+            // 
             // calisan_bilgi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjeOdevi.Properties.Resources.Untitled_6;
             this.ClientSize = new System.Drawing.Size(643, 465);
+            this.Controls.Add(this.btnRapor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPara);
             this.Controls.Add(this.textBox1);
@@ -218,5 +230,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblPara;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRapor;
     }
 }

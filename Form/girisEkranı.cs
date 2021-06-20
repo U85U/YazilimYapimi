@@ -21,7 +21,7 @@ namespace ProjeOdevi
         }
         public static string user;
 
-        SqlConnection baglanti = new SqlConnection("Data Source=LAPTOP-SNVLI3E4;Initial Catalog=MARKETLER;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-N7M3D64;Initial Catalog=MARKETLER;Integrated Security=True");
         SqlDataReader reader;
         bool parola = false;
        

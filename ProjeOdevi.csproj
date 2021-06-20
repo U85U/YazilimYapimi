@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="raporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporForm.Designer.cs">
+      <DependentUpon>raporForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\anaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Sınıf\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sınıf\Urun.cs" />
+    <EmbeddedResource Include="raporForm.resx">
+      <DependentUpon>raporForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\anaSayfa.resx">
       <DependentUpon>anaSayfa.cs</DependentUpon>
     </EmbeddedResource>

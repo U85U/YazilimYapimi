@@ -65,10 +65,10 @@
             this.buton_Alisveris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buton_Alisveris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buton_Alisveris.ForeColor = System.Drawing.Color.SandyBrown;
-            this.buton_Alisveris.Location = new System.Drawing.Point(339, 137);
+            this.buton_Alisveris.Location = new System.Drawing.Point(340, 137);
             this.buton_Alisveris.Margin = new System.Windows.Forms.Padding(2);
             this.buton_Alisveris.Name = "buton_Alisveris";
-            this.buton_Alisveris.Size = new System.Drawing.Size(99, 126);
+            this.buton_Alisveris.Size = new System.Drawing.Size(102, 126);
             this.buton_Alisveris.TabIndex = 4;
             this.buton_Alisveris.Text = "Alışveriş";
             this.buton_Alisveris.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
