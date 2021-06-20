@@ -65,8 +65,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.parabirimi = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblEkleyecek = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblParaKullanıcı = new System.Windows.Forms.Label();
@@ -77,10 +75,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.tutarson = new System.Windows.Forms.Label();
-            this.guncelKur = new System.Windows.Forms.Label();
-            this.sonkur = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGoruntule)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -583,12 +577,6 @@
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Transparent;
             this.tabPage3.BackgroundImage = global::ProjeOdevi.Properties.Resources.Untitled_82;
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.sonkur);
-            this.tabPage3.Controls.Add(this.guncelKur);
-            this.tabPage3.Controls.Add(this.tutarson);
-            this.tabPage3.Controls.Add(this.parabirimi);
-            this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.lblEkleyecek);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.lblParaKullanıcı);
@@ -604,28 +592,7 @@
             this.tabPage3.Size = new System.Drawing.Size(591, 365);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Para Ekleme";
-            // 
-            // parabirimi
-            // 
-            this.parabirimi.AutoSize = true;
-            this.parabirimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.parabirimi.ForeColor = System.Drawing.Color.White;
-            this.parabirimi.Location = new System.Drawing.Point(398, 130);
-            this.parabirimi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.parabirimi.Name = "parabirimi";
-            this.parabirimi.Size = new System.Drawing.Size(0, 17);
-            this.parabirimi.TabIndex = 47;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.SandyBrown;
-            this.label6.Location = new System.Drawing.Point(267, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 17);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Para birimi";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // lblEkleyecek
             // 
@@ -646,9 +613,9 @@
             this.label9.Location = new System.Drawing.Point(267, 104);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 16);
+            this.label9.Size = new System.Drawing.Size(103, 16);
             this.label9.TabIndex = 43;
-            this.label9.Text = "Para Miktarı : ";
+            this.label9.Text = "Para Miktarı (₺) :";
             // 
             // lblParaKullanıcı
             // 
@@ -776,50 +743,6 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // tutarson
-            // 
-            this.tutarson.AutoSize = true;
-            this.tutarson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tutarson.ForeColor = System.Drawing.Color.White;
-            this.tutarson.Location = new System.Drawing.Point(435, 196);
-            this.tutarson.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.tutarson.Name = "tutarson";
-            this.tutarson.Size = new System.Drawing.Size(0, 17);
-            this.tutarson.TabIndex = 49;
-            // 
-            // guncelKur
-            // 
-            this.guncelKur.AutoSize = true;
-            this.guncelKur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guncelKur.ForeColor = System.Drawing.Color.SandyBrown;
-            this.guncelKur.Location = new System.Drawing.Point(332, 231);
-            this.guncelKur.Name = "guncelKur";
-            this.guncelKur.Size = new System.Drawing.Size(85, 17);
-            this.guncelKur.TabIndex = 50;
-            this.guncelKur.Text = "Güncel kur :";
-            // 
-            // sonkur
-            // 
-            this.sonkur.AutoSize = true;
-            this.sonkur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sonkur.ForeColor = System.Drawing.Color.White;
-            this.sonkur.Location = new System.Drawing.Point(435, 231);
-            this.sonkur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.sonkur.Name = "sonkur";
-            this.sonkur.Size = new System.Drawing.Size(0, 17);
-            this.sonkur.TabIndex = 51;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.Color.SandyBrown;
-            this.label14.Location = new System.Drawing.Point(332, 196);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 17);
-            this.label14.TabIndex = 52;
-            this.label14.Text = "Tutar : ";
-            // 
             // kabulRed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -900,11 +823,5 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label parabirimi;
-        private System.Windows.Forms.Label tutarson;
-        private System.Windows.Forms.Label sonkur;
-        private System.Windows.Forms.Label guncelKur;
-        private System.Windows.Forms.Label label14;
     }
 }
