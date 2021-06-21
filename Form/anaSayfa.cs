@@ -71,5 +71,17 @@ namespace ProjeOdevi
                 this.Close();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            raporForm rapor = new raporForm();
+            rapor.Show();
+            this.Hide();
+        }
+
+        private void ana_sayfa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

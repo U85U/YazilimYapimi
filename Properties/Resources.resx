@@ -124,20 +124,41 @@
   <data name="Untitled-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="giris1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giris1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alımsatım" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alımsatım.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alımsatım1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alımsatım1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rapor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rapor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="giris21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\giris21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alımsatım2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alımsatım2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled-81" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-81.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giris1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giris1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giris.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alımsatım21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alımsatım21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled-82" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-82.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rapor2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rapor2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +169,9 @@
   <data name="Untitled-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Untitled-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,10 +181,13 @@
   <data name="Untitled-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="giris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giris.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled-82" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-82.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rapor3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rapor3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

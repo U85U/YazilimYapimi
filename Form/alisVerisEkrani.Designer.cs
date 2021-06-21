@@ -33,10 +33,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_satinAl = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPara = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSatEmri = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,28 +128,28 @@
             this.comboBox1.TabIndex = 43;
             this.comboBox1.Text = "Arpa";
             // 
-            // button4
+            // btn_satinAl
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(447, 304);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 35);
-            this.button4.TabIndex = 44;
-            this.button4.Text = "Satın Al";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_satinAl.BackColor = System.Drawing.Color.Transparent;
+            this.btn_satinAl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_satinAl.FlatAppearance.BorderSize = 0;
+            this.btn_satinAl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_satinAl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_satinAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_satinAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_satinAl.ForeColor = System.Drawing.Color.White;
+            this.btn_satinAl.Location = new System.Drawing.Point(459, 226);
+            this.btn_satinAl.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_satinAl.Name = "btn_satinAl";
+            this.btn_satinAl.Size = new System.Drawing.Size(115, 35);
+            this.btn_satinAl.TabIndex = 44;
+            this.btn_satinAl.Text = "Satın Al";
+            this.btn_satinAl.UseVisualStyleBackColor = false;
+            this.btn_satinAl.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(461, 274);
+            this.textBox1.Location = new System.Drawing.Point(468, 186);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -180,16 +183,60 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Para: ";
             // 
+            // btnSatEmri
+            // 
+            this.btnSatEmri.BackColor = System.Drawing.Color.Transparent;
+            this.btnSatEmri.Enabled = false;
+            this.btnSatEmri.FlatAppearance.BorderSize = 0;
+            this.btnSatEmri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSatEmri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSatEmri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSatEmri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSatEmri.ForeColor = System.Drawing.Color.White;
+            this.btnSatEmri.Location = new System.Drawing.Point(468, 370);
+            this.btnSatEmri.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSatEmri.Name = "btnSatEmri";
+            this.btnSatEmri.Size = new System.Drawing.Size(145, 35);
+            this.btnSatEmri.TabIndex = 48;
+            this.btnSatEmri.Text = "Alım emri ver";
+            this.btnSatEmri.UseVisualStyleBackColor = false;
+            this.btnSatEmri.Click += new System.EventHandler(this.btnSatEmri_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(370, 338);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 15);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Alış Belirle (Birim Fiyatı):";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(515, 337);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(76, 20);
+            this.textBox2.TabIndex = 50;
+            // 
             // calisan_bilgi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjeOdevi.Properties.Resources.Untitled_6;
+            this.BackgroundImage = global::ProjeOdevi.Properties.Resources.alımsatım21;
             this.ClientSize = new System.Drawing.Size(643, 465);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSatEmri);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPara);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_satinAl);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -214,9 +261,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_satinAl;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblPara;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSatEmri;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
